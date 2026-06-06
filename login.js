@@ -37,4 +37,14 @@ form.onsubmit = function (event) {
     } else {
         errorMsg.innerHTML = "Invalid email or password";
     }
+
+    if(found == true){
+        window.location.href = "home.html";
+    } else {
+        errorMsg.innerHTML = "Wrong email or password";
+    }
 };
+
+function goToSignup(){
+    window.location.href="registrationpage.html";
+}
