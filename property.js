@@ -4,11 +4,11 @@ function goHome(){
 }
 
 function goWorkspace(){
-  window.location.href = "workspace.html";
+  window.location.href = "workspace-detail.html";
 }
 
 function logout(){
-  window.location.href = "landing.html";
+  window.location.href = "index.html";
 }
 
 // VALID ADDRESS CHECK (simple rule)
