@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Workspace</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Add Workspace</h1>
+
+<form id="workspaceForm" class="workspace-form">
+
+    <h2>Add New Workspace</h2>
+
+    <!-- PROPERTY -->
+    <div class="form-group">
+        <label>Select Property</label>
+        <select id="property"></select>
+    </div>
+
+    <!-- TYPE (BULLET STYLE OPTIONS) -->
+    <div class="form-group">
+        <label>Workspace Type</label>
+
+        <div class="option-group">
+            <label class="option">
+                <input type="radio" name="type" value="Meeting Room" checked>
+                <span>Meeting Room</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="type" value="Private Office">
+                <span>Private Office</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="type" value="Open Desk">
+                <span>Open Desk</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- SEATS -->
+    <div class="form-group">
+        <label>Seats</label>
+        <input id="seats" type="number" placeholder="e.g. 10" required>
+    </div>
+
+    <!-- LEASE TERM (BULLET STYLE) -->
+    <div class="form-group">
+        <label>Lease Term</label>
+
+        <div class="option-group">
+            <label class="option">
+                <input type="radio" name="term" value="Day" checked>
+                <span>Day</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="term" value="Week">
+                <span>Week</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="term" value="Month">
+                <span>Month</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- PRICE -->
+    <div class="form-group">
+        <label>Price</label>
+        <input id="price" type="number" placeholder="e.g. 250" required>
+    </div>
+
+    <button type="submit" class="primary-btn">
+        Save Workspace
+    </button>
+
+</form>
+
+<script src="js/data.js"></script>
+<script src="js/workspace.js"></script>
+
+</body>
+</html>
