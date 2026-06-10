@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coworker Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Coworker Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+</header>
+
+<main>
+
+    <div class="filters">
+
+        <input id="searchText" placeholder="Search type...">
+
+        <input id="maxPrice" type="number" placeholder="Max Price">
+
+        <input id="minSeats" type="number" placeholder="Min Seats">
+
+        <select id="leaseFilter">
+            <option value="">Any Lease</option>
+            <option value="Day">Day</option>
+            <option value="Week">Week</option>
+            <option value="Month">Month</option>
+        </select>
+
+        <button onclick="applyFilters()">Search</button>
+
+    </div>
+
+    <div id="workspaceResults"></div>
+
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/coworker.js"></script>
+
+</body>
+</html>
