@@ -111,3 +111,111 @@ footer {
 footer p {
     font-weight: bold;
 }
+
+
+/*ADDED*/
+.top-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border: 1px solid #666;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .workspace-container {
+            width: 95%;
+            margin: 20px auto;
+            border: 1px solid #666;
+            background: white;
+            padding: 20px;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .workspace-left {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .workspace-right {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .workspace-photo {
+            width: 120px;
+            height: 120px;
+            border: 1px solid #666;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .detail-row label {
+            width: 160px;
+            font-weight: bold;
+        }
+
+        .detail-row input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #666;
+            border-radius: 4px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .review-box {
+            border: 1px solid #666;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+
+        .review-box textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #666;
+            border-radius: 4px;
+            resize: none;
+        }
+
+        .submit-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .review-card {
+            border: 1px solid #666;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stars {
+            color: goldenrod;
+            font-size: 18px;
+        }
