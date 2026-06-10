@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Create Account Form</title>
-<link rel = "stylesheet" href = "style.css">
+<link rel = "stylesheet" href = "registration.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
         <h3>CREATE AN ACCOUNT</h3>
 
-        <form>
+        <form onsubmit="registerUser(); return false;">
 
             <div class="form-group">
                 <label>Full Name:</label>
@@ -59,7 +59,7 @@
 
             <div class="login-text">
                 Already have an account?
-                <button type="button">Login</button>
+                <a href = "login.html"><button type="button">Login</button></a>
             </div>
 
         </form>
@@ -76,7 +76,7 @@
 
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="script.js"></script>
+<script src="registration.js"></script>
 
 </body>
 </html>
