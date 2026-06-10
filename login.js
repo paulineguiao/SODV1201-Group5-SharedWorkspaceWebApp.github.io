@@ -1,7 +1,7 @@
 // fake database (users array)
 let users = [
-    { email: "admin@gmail.com", password: "1234" },
-    { email: "user@gmail.com", password: "abcd" }
+    { email: "admin@gmail.com", password: "1234", role: "owner" },
+    { email: "user@gmail.com", password: "abcd", role: "coworker" }
 ];
 
 let form = document.getElementById("loginForm");
@@ -23,26 +23,31 @@ form.onsubmit = function (event) {
     }
 
     let loginSuccess = false;
+     let foundUser = null;
 
     // check users array
     for (let i = 0; i < users.length; i++) {
         if (email == users[i].email && password == users[i].password) {
             loginSuccess = true;
+            foundUser = users[i];
         }
     }
 
     if (loginSuccess == true) {
         alert("Login successful!");
-        window.location.href = "dashboard.html";
+
+        localStorage.setItem("role", foundUser.role);
+
+        if (foundUser.role === "owner") {
+            window.location.href = "owner-dashboard.html";
+        } else if (foundUser.role === "coworker") {
+            window.location.href = "searchworkspace.html";
+        }
+
     } else {
         errorMsg.innerHTML = "Invalid email or password";
     }
 
-    if(found == true){
-        window.location.href = "home.html";
-    } else {
-        errorMsg.innerHTML = "Wrong email or password";
-    }
 };
 
 function goToSignup(){
