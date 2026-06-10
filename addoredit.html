@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Workspace</title>
+    <link rel="stylesheet" href="addoredit.css">
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-buttons">
+                <a href="index.html"><button class="btn-nav">Home</button></a>
+                <button class="btn-nav">Property</button>
+                <button class="btn-nav">Logout</button>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main class="welcome">
+            <h2>WORKSPACE</h2>
+            <p>Enter workspace details below</p>
+
+            <form class="workspace-form">
+                <div class="form-row">
+                    <label>Property:</label>
+                    <select>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Workspace Type:</label>
+                    <select>
+                        <option value="" disabled hidden selected></option>
+                        <option value="Private Office">Private Office</option>
+                        <option value="Meeting Room">Meeting Room</option>
+                        <option value="Open Desk">Open Desk</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>No. of Seats:</label>
+                    <input type="number">
+                </div>
+                <div class="form-row">
+                    <label>Smoking Allowed:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="smoking" value="yes"> Yes</label>
+                        <label><input type="radio" name="smoking" value="no"> No</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label>Availability Date:</label>
+                    <input type="date" placeholder="Calendar">
+                </div>
+                <div class="form-row">
+                    <label>Term:</label>
+                    <select>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Price:</label>
+                    <input type="number">
+                </div>
+                <div class="form-row">
+                    <label>Upload Image:</label>
+                    <input type="file" accept="image/*">
+                </div>
+                <div class="form-row center">
+                    <button type="submit" class="btn-submit">Add/Update Workspace</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Group 5</p>
+        </footer>
+    </div>
+</body>
+</html>
