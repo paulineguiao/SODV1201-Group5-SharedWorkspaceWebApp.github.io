@@ -5,120 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workspace Details</title>
     <link rel="stylesheet" href="workspace-details.css">
-    <style>
-        .top-buttons {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .nav-btn {
-            padding: 10px 20px;
-            border: 1px solid #666;
-            border-radius: 4px;
-            background: white;
-            cursor: pointer;
-        }
-
-        .workspace-container {
-            width: 95%;
-            margin: 20px auto;
-            border: 1px solid #666;
-            background: white;
-            padding: 20px;
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .workspace-left {
-            flex: 1;
-            min-width: 350px;
-        }
-
-        .workspace-right {
-            flex: 1;
-            min-width: 350px;
-        }
-
-        .workspace-photo {
-            width: 120px;
-            height: 120px;
-            border: 1px solid #666;
-            margin-bottom: 20px;
-            object-fit: cover;
-        }
-
-        .detail-row {
-            display: flex;
-            margin-bottom: 15px;
-            align-items: center;
-        }
-
-        .detail-row label {
-            width: 160px;
-            font-weight: bold;
-        }
-
-        .detail-row input {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #666;
-            border-radius: 4px;
-        }
-
-        .radio-group {
-            display: flex;
-            gap: 20px;
-        }
-
-        .review-box {
-            border: 1px solid #666;
-            padding: 20px;
-            border-radius: 4px;
-            margin-bottom: 25px;
-        }
-
-        .review-box textarea {
-            width: 100%;
-            height: 80px;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #666;
-            border-radius: 4px;
-            resize: none;
-        }
-
-        .submit-btn {
-            margin-top: 15px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        .review-card {
-            border: 1px solid #666;
-            border-radius: 4px;
-            padding: 15px;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .stars {
-            color: goldenrod;
-            font-size: 18px;
-        }
-    </style>
 </head>
 <body>
 
-    <div class="page-title">Workspace Details Page</div>
-
     <header>
-        <h1>HEADER<br>[Logo/Title]</h1>
+        <h1>Group 5<br><br></h1>
 
         <div class="top-buttons">
             <button class="nav-btn" onclick="goHome()">Home</button>
@@ -188,7 +79,7 @@
 
             <div class="workspace-right">
 
-                <div class="review-box">
+                <div class="review-box" id="reviewSection">
                     <h3>Rate this Workspace:</h3>
 
                     <div class="stars">☆☆☆☆☆</div>
@@ -230,7 +121,6 @@
     </main>
 
     <footer>
-        <p>FOOTER</p>
         <p>© 2026 Group 5</p>
     </footer>
 
