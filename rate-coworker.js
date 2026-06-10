@@ -1,9 +1,11 @@
 function goHome() {
     alert("Returning to Home Page");
+    window.location.href = "owner-dashboard.html";
 }
 
 function logout() {
     alert("Logging out...");
+    window.location.href = "index.html";
 }
 
 function submitCoworkerReview() {
