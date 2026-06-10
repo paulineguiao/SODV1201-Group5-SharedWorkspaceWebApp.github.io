@@ -1,9 +1,23 @@
 function goHome() {
+
+    const role = localStorage.getItem("role");
     alert("Returning to Home Page");
+
+     if (role === "coworker") {
+        window.location.href = "searchworkspace.html";
+    } 
+    else if (role === "owner") {
+        window.location.href = "owner-dashboard.html";
+    } 
+    else {
+        // fallback if role is missing or corrupted
+        window.location.href = "index.html";
+    }
 }
 
 function logout() {
     alert("Logging out...");
+    window.location.href = "index.html";
 }
 
 function submitReview() {
@@ -29,3 +43,17 @@ function submitReview() {
 
     alert("Review submitted!");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Get the saved role from login (example: "coworker" or "owner")
+    const role = localStorage.getItem("role");
+
+    // Get the review section
+    const reviewSection = document.getElementById("reviewSection");
+
+    // If NOT a coworker → hide the review box
+    if (role !== "coworker") {
+        reviewSection.style.display = "none";
+    }
+});
