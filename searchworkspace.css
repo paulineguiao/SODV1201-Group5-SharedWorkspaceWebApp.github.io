@@ -1,0 +1,103 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width: 100%;
+    margin: 0;
+    background:#f2f2f2;
+}
+
+/* LOGO */
+.img{
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* HEADER */
+.header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #999;
+    background: #fff;
+}
+
+.nav-buttons button{
+    margin-left: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* CONTENT */
+.content{
+    padding:30px 0;
+    text-align:center;
+    border-bottom:1px solid #999;
+    min-height: 75vh;
+}
+
+.filters{
+    width: 80%;
+    margin: 0 auto;
+    text-align:left;
+}
+
+.form-group{
+    margin:10px 0;
+}
+
+.form-group label{
+    display:inline-block;
+    width:150px;
+    text-align:right;
+    margin-right:10px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group select{
+    width:180px;
+    height:22px;
+    border:1px solid #888;
+}
+
+.buttons{
+    margin-top:20px;
+    text-align:center;
+}
+
+.buttons button{
+    padding:6px 14px;
+    font-size:12px;
+    cursor:pointer;
+}
+
+/* RESULTS */
+.results{
+    width: 80%;
+    margin: 0 auto;
+    text-align:left;
+}
+
+.results div{
+    border:1px solid #aaa;
+    background:#fff;
+    padding:15px;
+    margin:15px 0;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:15px;
+    font-size:12px;
+    font-weight:bold;
+}
