@@ -76,5 +76,10 @@ function registerUser() {
 
     alert("Account created successfully!");
 
-    document.getElementById("myForm").reset();
+   
+    if (role === "Owner") {
+        window.location.href = "owner-dashboard.html";
+    } else {
+        window.location.href = "searchworkspace.html";
+    }
 }
