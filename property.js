@@ -1,10 +1,13 @@
+const user = JSON.parse(localStorage.getItem("user"));
+
+
 // NAVIGATION
 function goHome(){
-  window.location.href = "ownerHome.html";
+  window.location.href = "owner-dashboard.html";
 }
 
 function goWorkspace(){
-  window.location.href = "workspace-detail.html";
+  window.location.href = "workspace.html";
 }
 
 function logout(){
@@ -55,4 +58,7 @@ function saveProperty(){
     <p><b>Square Feet:</b> ${sqft}</p>
     ${imgURL ? `<img src="${imgURL}" width="200">` : ""}
   `;
+
 }
+
+
