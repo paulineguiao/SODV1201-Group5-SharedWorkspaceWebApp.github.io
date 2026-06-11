@@ -10,7 +10,7 @@
 
     <!-- Header -->
     <header class="header">
-    <img src="header image.png" alt="Website Logo" class="header-img">
+        <img src="header image.png" alt="Website Logo" class="header-img">
     </header>
 
     <!-- Main Content -->
@@ -18,7 +18,8 @@
         <div class="login-container">
             <h2>LOGIN TO YOUR ACCOUNT</h2>
 
-            <form id="loginForm" onsubmit="handleLogin(event); return false;">
+            <!-- FIXED FORM TAG -->
+            <form id="loginForm">
 
                 <div class="form-group">
                     <label>Email Address:</label>
@@ -38,7 +39,7 @@
 
                 <div class="signup-section">
                     <span>Don't have an account?</span>
-                <button type="button" class="signup-btn" onclick="goToSignup()">
+                    <button type="button" class="signup-btn" onclick="goToSignup()">
                         Sign Up
                     </button>
                 </div>
@@ -52,6 +53,7 @@
         <p>© 2026 Group 5</p>
     </footer>
 
+    <script src="js/data.js"></script>
     <script src="login.js"></script>
 
 </body>
