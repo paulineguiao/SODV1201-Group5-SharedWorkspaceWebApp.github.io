@@ -1,55 +1,55 @@
-// fake database (users array)
-let users = [
-    { email: "admin@gmail.com", password: "1234", role: "owner" },
-    { email: "user@gmail.com", password: "abcd", role: "coworker" }
-];
-
-let form = document.getElementById("loginForm");
+// Get the form
+const form = document.getElementById("loginForm");
 
 form.onsubmit = function (event) {
     event.preventDefault();
 
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
     let errorMsg = document.getElementById("errorMsg");
 
-    // reset message
     errorMsg.innerHTML = "";
 
-    // check empty input
-    if (email == "" || password == "") {
+    // Empty input check
+    if (email === "" || password === "") {
         errorMsg.innerHTML = "Please fill in all fields";
         return;
     }
 
-    let loginSuccess = false;
-     let foundUser = null;
+    // Find user in data.js
+    let foundUser = users.find(u => 
+        u.email === email && u.password === password
+    );
 
-    // check users array
-    for (let i = 0; i < users.length; i++) {
-        if (email == users[i].email && password == users[i].password) {
-            loginSuccess = true;
-            foundUser = users[i];
-        }
-    }
-
-    if (loginSuccess == true) {
-        alert("Login successful!");
-
-        localStorage.setItem("role", foundUser.role);
-
-        if (foundUser.role === "owner") {
-            window.location.href = "owner-dashboard.html";
-        } else if (foundUser.role === "coworker") {
-            window.location.href = "searchworkspace.html";
-        }
-
-    } else {
+    if (!foundUser) {
         errorMsg.innerHTML = "Invalid email or password";
+        return;
     }
 
+    // SUCCESSFUL LOGIN
+    alert("Login successful!");
+
+    // Save BOTH role and full user object
+    localStorage.setItem("role", foundUser.role);
+    localStorage.setItem("user", JSON.stringify(foundUser));
+
+    // Redirect based on role
+    if (foundUser.role === "owner") {
+        window.location.href = "owner-dashboard.html";
+    } 
+    else if (foundUser.role === "coworker") {
+        window.location.href = "searchworkspace.html";
+    }
 };
 
-function goToSignup(){
-    window.location.href="registrationpage.html";
+// Navigation
+function goToSignup() {
+    window.location.href = "registrationpage.html";
 }
+
+
+let storedUsers = JSON.parse(localStorage.getItem("users")) || users;
+
+let foundUser = storedUsers.find(u => 
+    u.email === email && u.password === password
+);
