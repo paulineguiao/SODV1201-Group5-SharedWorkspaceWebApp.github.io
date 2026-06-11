@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fb;
+    color: #222;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #2f3e4e;
+    color: white;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+header button {
+    background: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+header button:hover {
+    background: #dfe6ee;
+}
+
+/* ===== PAGE LAYOUT ===== */
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 25px;
+    color: #2f3e4e;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    margin: 0 0 5px 0;
+}
+
+.card p {
+    margin: 4px 0;
+    color: #555;
+}
+
+/* ===== CARD BUTTONS ===== */
+.card button {
+    margin-top: 10px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #e74c3c;
+    color: white;
+    font-size: 13px;
+}
+
+.card button:hover {
+    background: #c0392b;
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-box {
+    width: 320px;
+    margin: 120px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background: #2f3e4e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #1f2a36;
+}
+
+.workspace-form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer{
+  text-align: center;
+  padding: 15px;
+  background: #fff;
+  border-top: 2px solid #ccc;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
